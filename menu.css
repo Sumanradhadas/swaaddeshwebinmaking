@@ -36,18 +36,16 @@ nav {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     padding: 10px 5%;
 }
-@font-face {
-    font-family: 'Samarkan';
-    src: url('../assets/fonts/SAMAN___.TTF') format('truetype');
-    font-display: swap;
-}
-
 /* Logo Styling */
 .logo {
     text-align: center;
     position: relative;
 }
-
+@font-face {
+    font-family: 'Samarkan';
+    src: url('../assets/fonts/SAMAN___.TTF') format('truetype');
+    font-display: swap;
+}
 .logo-text {
     font-family: 'Samarkan', sans-serif;
     font-size: 45px;
