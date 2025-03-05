@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Swaddesh</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+    <script defer src="scripts/main.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- Preload Images -->
+    <link rel="preload" as="image" href="assets/dine in.jpg">
+    <link rel="preload" as="image" href="assets/drinks.png">
+
+    <style>
+        /* Prevent unwanted iframe injection */
+        iframe:not(#pageIframe) {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html" class="logo-text">Swaaddesh</a>
+            <p class="tagline">Bihar themed restaurant</p>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="social-media.html">Social Media</a></li>
+        </ul>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+    </nav>
+    
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+            <li><a href="about.html" onclick="toggleMenu()">About Us</a></li>
+            <li><a href="menu.html" onclick="toggleMenu()">Menu</a></li>
+            <li><a href="reviews.html" onclick="toggleMenu()">Reviews</a></li>
+            <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
+            <li><a href="social-media.html" onclick="toggleMenu()">Social Media</a></li>
+        </ul>
+    </div>
+</header>
+
+<section class="menu-section">
+    <div class="menu-card">
+        <img src="assets/dine in.jpg" alt="Dine-In Menu" loading="eager">
+        <h2>Dine In</h2>
+        <p>हमारे पारंपरिक बिहारी व्यंजनों का आनंद लें।</p>
+        <button class="btn" data-url="dine-in.html">मेनू देखें</button>
+    </div>
+
+    <div class="menu-card">
+        <img src="assets/drinks.png" alt="Drinks Menu" loading="eager">
+        <h2>DRINKS IN</h2>
+        <p>अपने भोजन के साथ ताज़गी भरे पेय पदार्थों का आनंद लें।</p>
+        <button class="btn" data-url="drinks-in.html">मेनू देखें</button>
+    </div>
+</section>
+
+<!-- Modal for displaying pages -->
+<div id="pageModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <iframe id="pageIframe" frameborder="0"></iframe>
+    </div>
+</div>
+
+<style>
+    .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        justify-content: center;
+        align-items: center;
+    }
+    .modal-content {
+        background: #fff;
+        width: 90%;
+        max-width: 800px;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 24px;
+        cursor: pointer;
+    }
+    iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+    @media (max-width: 768px) {
+        .modal-content {
+            width: 95%;
+            height: 90vh;
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".btn").forEach(button => {
+            button.addEventListener("click", function () {
+                const pageUrl = this.getAttribute("data-url");
+                const modal = document.getElementById("pageModal");
+                const iframe = document.getElementById("pageIframe");
+
+                if (pageUrl) {
+                    iframe.src = pageUrl;
+                    modal.style.display = "flex";
+                    document.body.style.overflow = "hidden"; // Prevent background scrolling
+                }
+            });
+        });
+
+        // Close function
+        document.querySelector(".close-btn").addEventListener("click", function () {
+            const modal = document.getElementById("pageModal");
+            const iframe = document.getElementById("pageIframe");
+
+            modal.style.display = "none";
+            iframe.removeAttribute("src");
+            document.body.style.overflow = "auto"; // Enable background scrolling
+        });
+
+        // Close modal on clicking outside content
+        window.addEventListener("click", function (event) {
+            const modal = document.getElementById("pageModal");
+            if (event.target === modal) {
+                modal.style.display = "none";
+                document.getElementById("pageIframe").removeAttribute("src");
+                document.body.style.overflow = "auto";
+            }
+        });
+    });
+</script>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h2>Swaaddesh</h2>
+            <p>Experience the authentic flavors of Bihar with a village ambiance.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>📍 Patna, Bihar, India</p>
+            <p>📞 +91 98765 43210</p>
+            <p>✉ support@swaddesh.com</p>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        &copy; 2025 Swaddesh. All Rights Reserved. DESIGNED BY RADHA BHAKT
+    </div>
+</footer>
+</body>
+</html>

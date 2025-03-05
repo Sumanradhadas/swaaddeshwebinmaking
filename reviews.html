@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swaddesh - Reviews</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script defer src="scripts/main.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+      <nav class="navbar">
+          <div class="logo">
+              <a href="index.html" class="logo-text">Swaaddesh</a>
+              <p class="tagline">Bihar themed restaurant</p>
+          </div>
+  
+          <!-- Normal Navigation (Desktop) -->
+          <ul class="nav-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="menu.html">Menu</a></li>
+              <li><a href="reviews.html">Reviews</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="social-media.html">Social Media</a></li>
+          </ul>
+          <button class="hamburger" onclick="toggleMenu()">☰</button>
+      </nav>
+      
+      <div class="mobile-menu" id="mobileMenu">
+          <ul>
+              <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+              <li><a href="about.html" onclick="toggleMenu()">About Us</a></li>
+              <li><a href="menu.html" onclick="toggleMenu()">Menu</a></li>
+              <li><a href="reviews.html" onclick="toggleMenu()">Reviews</a></li>
+              <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
+              <li><a href="social-mediat.html" onclick="toggleMenu()">Social Media</a></li>
+          </ul>
+      </div>
+  </header>
+      
+    <!-- Google Reviews Section -->
+    <section id="google-reviews" class="review-section">
+        <h2>📍 Google Reviews</h2>
+        <div class="review-grid">
+            <div class="review-item">
+                <img src="assets/meghna.png" alt="Review by Meghna">
+                <p><strong>Meghna</strong></p>
+                <p>"The place is very photogenic. The decorations are beautiful and on point with the theme..."</p>
+                <a href="https://maps.app.goo.gl/oTU6A3uUDJ5MJSiW6" target="_blank">View on Google Maps</a>
+            </div>
+            <div class="review-item">
+                <img src="assets/barkha.png" alt="Review by Barkha Trehan">
+                <p><strong>Barkha Trehan</strong></p>
+                <p>"Authentic Bihari Restaurant with brilliant food and great ambiance..."</p>
+                <a href="https://maps.app.goo.gl/ZHkVcwEHqniFkmnD8" target="_blank">View on Google Maps</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Zomato Reviews Section -->
+    <section id="zomato-reviews" class="review-section">
+        <h2>🍽️ Zomato Reviews</h2>
+        <div class="review-grid">
+            <div class="review-item">
+                <p><strong>Abhishek Singh</strong></p>
+                <p>"Food was awesome and the service by Aashish was extremely pleasant."</p>
+                <a href="https://www.zoma.to/kYaDorB" target="_blank">View on Zomato</a>
+            </div>
+            <div class="review-item">
+                <p><strong>Anubhav Kumar</strong></p>
+                <p>"Very good food with great service and ambiance."</p>
+                <a href="https://www.zoma.to/wbZygXM" target="_blank">View on Zomato</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- YouTube Reviews Section -->
+    <section id="youtube-reviews" class="review-section">
+        <h2>🎥 YouTube Vlog Reviews</h2>
+        <div class="video-reviews">
+            <iframe width="360" height="215" src="https://www.youtube.com/embed/6v0VVWFbEsI" frameborder="0" allowfullscreen></iframe>
+            <iframe width="360" height="215" src="https://www.youtube.com/embed/XRpwMU1ejf4" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+    
+    <!-- Review Submission Form -->
+    <section id="submit-review" class="review-section">
+        <h2>✍️ Submit Your Review</h2>
+        <form class="review-form">
+            <input type="text" class="input-field" placeholder="Your Name" required>
+            <textarea class="input-field" placeholder="Your Review" rows="4" required></textarea>
+            <button type="submit" class="submit-btn">Submit Review</button>
+        </form>
+    </section>
+<footer>
+  <div class="footer-container">
+    <div class="footer-section">
+      <h2>Swaaddesh</h2>
+      <p>Experience the authentic flavors of Bihar with a village ambiance.</p>
+    </div>
+    <div class="footer-section">
+      <h3 class="footer-heading">Quick Links</h3>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <div class="footer-section">
+      <h3 class="footer-heading">Contact Us</h3>
+      <div class="footer-contact">
+        <p>📍 Patna, Bihar, India</p>
+        <p>📞 +91 98765 43210</p>
+        <p>✉ support@swaddesh.com</p>
+      </div>
+    </div>
+    <div class="footer-section">
+      <h3 class="footer-heading">Subscribe to Our Newsletter</h3>
+      <form class="footer-form">
+        <input type="email" placeholder="Enter your email" required>
+        <button>Subscribe</button>
+      </form>
+    </div>
+  </div>
+  <div class="social-icons">
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+  </div>
+  <div class="footer-copyright">
+    &copy; 2025 Swaddesh. All Rights Reserved.  DESIGNED BY RADHA BHAKT
+  </div>
+</footer>
+<!-- FontAwesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+ </body>
+</html>

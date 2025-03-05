@@ -1,0 +1,126 @@
+/* Swaddesh - Social Media Page Styles */
+
+:root {
+  --primary-color: #d2691e; /* Village earth tone */
+  --secondary-color: #ffcc00; /* Warm desi glow */
+  --text-color: #3d2c1d;
+  --bg-light: #f5f0e1;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: url() center/cover no-repeat;
+  color: white;
+  position: relative;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Social Media Feeds */
+.social-feeds {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.feed-box {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.feed-box:hover {
+  transform: translateY(-5px);
+}
+
+/* Hashtag Wall */
+.hashtag-wall {
+  background: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.hashtag-wall h2 {
+  font-size: 2rem;
+}
+
+.hashtag-wall .hashtags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.hashtags span {
+  background: var(--secondary-color);
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Call-to-Action */
+.cta {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.cta button {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cta button:hover {
+  background: var(--secondary-color);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .social-feeds {
+    flex-direction: column;
+    align-items: center;
+  }
+}

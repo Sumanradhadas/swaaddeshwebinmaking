@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Experience the authentic flavors of Bihar at Swaaddesh – a village-themed restaurant offering traditional Bihari cuisine.">
+    <meta name="keywords" content="Bihar cuisine, traditional food, village-themed restaurant, Swaaddesh">
+    <meta name="author" content="Your Name">
+    
+    <title>Swaaddesh - Authentic Bihari Cuisine</title>
+
+    <!-- Preload essential assets -->
+    <link rel="preload" href="styles/style.css" as="style">
+    <link rel="preload" href="scripts/main.js" as="script">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/logopre.png">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/style.css">
+
+    <!-- Scripts -->
+    <script defer src="scripts/main.js"></script>
+</head>
+<body>
+
+<!-- Preloader -->
+<div id="preloader">
+    <div class="preloader-container">
+        <img src="assets/logopre.png" alt="Loading..." class="preload-logo">
+        <div class="steam">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</div>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html" class="logo-text">Swaaddesh</a>
+            <p class="tagline">Bihar themed restaurant</p>
+        </div>
+
+        <!-- Normal Navigation (Desktop) -->
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="social-media.html">Social Media</a></li>
+        </ul>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+    </nav>
+    
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+            <li><a href="about.html" onclick="toggleMenu()">About Us</a></li>
+            <li><a href="menu.html" onclick="toggleMenu()">Menu</a></li>
+            <li><a href="reviews.html" onclick="toggleMenu()">Reviews</a></li>
+            <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
+            <li><a href="social-media.html" onclick="toggleMenu()">Social Media</a></li>
+        </ul>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="slider">
+        <!-- Slide 1 -->
+        <div class="slides active">
+            <picture>
+                <source srcset="assets/hero1.png" media="(max-width: 200px)">
+                <img src="assets/hero1.png" alt="Fine Dining Experience">
+            </picture>
+            <div class="overlay"></div>
+        </div>
+        
+        <!-- Slide 2 -->
+        <div class="slides">
+            <picture>
+                <source srcset="assets/restaurant020240923043621.jpg" media="(max-width: 768px)">
+                <img src="assets/hero2.png" alt="Fine Dining Experience">
+            </picture>
+            <div class="overlay"></div>
+        </div>
+        
+        <!-- Slide 3 -->
+        <div class="slides">
+            <picture>
+                <source srcset="assets/hero3.png" media="(max-width: 768px)">
+                <img src="assets/hero4.png" alt="Fine Dining Experience">
+            </picture>
+            <div class="overlay"></div>
+        </div>
+
+        <!-- Slide Text (Same for all slides) -->
+        <div class="slide-text">
+            <div class="text-overlay">
+                <h1>Welcome to <span>Swaaddesh</span></h1>
+                <p>Authentic Bihari flavors, where every meal is a tradition.</p>
+                <div class="btn-group">
+                    <a href="menu.html" class="cta-btn">Explore Menu</a>
+                    <a href="https://www.google.com/maps/reserve/v/dine/c/oeN95NlKc4k?source=pa&opi=89978449&hl=en-IN&gei=GULIZ9DOKKTY0-kP2o2h2Q4&sourceurl=https://www.google.com/search?q%3Dswadesh%2Brestaurant%2B%2Bpatna%26sca_esv%3Db3124e538ea91f17%26rlz%3D1C1ONGR_enIN1004IN1004%26biw%3D1536%26bih%3D730%26sxsrf%3DAHTn8zo3nS7D9_eTZclZZz9_CzW-R8_L5w:1741177363839%26ei%3DE0LIZ9_rMove2roPncWuaA%26ved%3D0ahUKEwifwYyS9_KLAxULr1YBHZ2iCw0Q4dUDCBA%26uact%3D5%26oq%3Dswadesh%2Brestaurant%2B%2Bpatna%26gs_lp%3DEgxnd3Mtd2l6LXNlcnAiGXN3YWRlc2ggcmVzdGF1cmFudCAgcGF0bmEyBBAjGCcyCxAuGIAEGMcBGK8BMgYQABgWGB5IjB5QwRFYwRFwAXgCkAEAmAG5A6ABwQWqAQcyLTEuMC4xuAEDyAEA-AEBmAIEoALRBcICBBAAGEfCAgoQABiwAxjWBBhHwgIFEAAYgATCAgYQABgHGB7CAggQABiABBjLAZgDAIgGAZAGB5IHCTIuMC4xLjAuMaAH_go%26sclient%3Dgws-wiz-serps" class="cta-btn reserve-btn">Reserve Your Table</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Dots for Navigation -->
+    <div class="dots-container"></div>
+</section>
+
+<!-- Partners Section -->
+<section class="partners-section">
+    <h2 class="partners-heading">We are also available on</h2>
+</section>
+
+<!-- Order Links Section -->
+<section class="partner-links">
+    <div class="partner-card">
+        <a href="https://www.zomato.com/patna/swaaddesh-sri-krishnapuri" target="_blank">
+            <img src="assets/Zomato_logo.png" alt="Zomato">
+            <p>Order on Zomato</p>
+        </a>
+    </div>
+
+    <div class="partner-card">
+        <a href="https://www.swiggy.com/city/patna/swaaddesh-boring-canal-road-rest87981" target="_blank">
+            <img src="assets/swiggy logo.jpg" alt="Swiggy">
+            <p>Order on Swiggy</p>
+        </a>
+    </div>
+
+    <div class="partner-card">
+        <a href="https://www.eazydiner.com/patna/swaaddesh-boring-road-patna-686894" target="_blank">
+            <img src="assets/easy diner logo.jpg" alt="EazyDiner">
+            <p>Reserve on EazyDiner</p>
+        </a>
+    </div>
+</section>
+
+
+</body>
+</html>
+
+<!-- Awards & Recognition Section -->
+<section class="awards-section">
+    <div class="awards-container">
+        <h2 class="classic-title">Our Achievements</h2>
+        <p class="awards-text">
+            At <span class="highlight">Swaaddesh</span>, we are honored to be recognized as the 
+            <strong>“Best Theme-Based Restaurant in Patna”</strong>. Our passion for authenticity and excellence 
+            continues to redefine the dining experience.
+        </p>
+
+        <div class="award-card fade-in">
+            <img src="assets/awards.png" alt="Best Theme-Based Restaurant Award" class="award-image">
+            <p class="award-detail">
+                Awarded for our exceptional ambiance, authentic flavors, and outstanding service, we take pride in 
+                delivering an unforgettable experience.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Restaurant Features Section -->
+<section class="restaurant-features">
+    <h2 class="classic-title">Restaurant Features</h2>
+    <div class="features-slider-wrapper">
+        <div class="features-slider">
+            <div class="feature-card">
+                <img src="assets/live screening.png" alt="LIVE SPORTS SCREENING">
+                <div class="feature-info">LIVE SPORTS SCREENING</div>
+            </div> 
+            <div class="feature-card">
+                <img src="assets/live music.png" alt="LIVE MUSIC">
+                <div class="feature-info">LIVE MUSIC</div>
+            </div>
+            <div class="feature-card">
+                <img src="assets/delicious food.png" alt="DELICIOUS FOOD">
+                <div class="feature-info">DELICIOUS FOOD</div>
+            </div>
+            <div class="feature-card">
+                <img src="assets/family dining.png" alt="FAMILY DINING">
+                <div class="feature-info">FAMILY DINING</div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Floating Social Media Icons -->
+<div class="social-nav">
+    <a href="https://facebook.com" class="social-icon facebook"><i class="fa-brands fa-facebook-f"></i></a>
+    <a href="https://whatsapp.com" class="social-icon whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+    <a href="mailto:example@email.com" class="social-icon email"><i class="fa-solid fa-envelope"></i></a>
+    <a href="https://instagram.com" class="social-icon instagram"><i class="fa-brands fa-instagram"></i></a>
+</div>
+<footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h2>Swaaddesh</h2>
+        <p>Experience the authentic flavors of Bihar with a village ambiance.</p>
+      </div>
+      <div class="footer-section">
+        <h3 class="footer-heading">Quick Links</h3>
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#menu">Menu</a>
+          <a href="#about">About Us</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3 class="footer-heading">Contact Us</h3>
+        <div class="footer-contact">
+          <p>📍 Patna, Bihar, India</p>
+          <p>📞 +91 98765 43210</p>
+          <p>✉ support@swaddesh.com</p>
+        </div>
+      </div>
+    
+        <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+    <div class="footer-copyright">
+      &copy; 2025 Swaddesh. All Rights Reserved. DESIGNED BY RADHA BHAKT
+    </div>
+  </footer>
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+</body>
+</html>

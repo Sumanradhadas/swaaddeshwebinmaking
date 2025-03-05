@@ -1,0 +1,386 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body */
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    text-align: center;
+}
+
+/* Navigation Bar */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2e2000;
+    padding: 10px 20px;
+    color: white;
+    transition: background 0.3s ease-in-out, padding 0.3s ease-in-out;
+    z-index: 1000;
+}
+.navbar.scrolled {
+    background: #361600;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 5%;
+}
+@font-face {
+    font-family: 'Samarkan';
+    src: url('../assets/fonts/SAMAN___.TTF') format('truetype');
+    font-display: swap;
+}
+
+/* Logo Styling */
+.logo {
+    text-align: center;
+    position: relative;
+}
+
+.logo-text {
+    font-family: 'Samarkan', sans-serif;
+    font-size: 45px;
+    color: rgb(255, 254, 249);
+    text-decoration: none;
+    display: inline-block;
+    text-shadow: 0 0 10px rgba(255, 223, 0, 1), 
+                 0 0 20px rgba(255, 223, 0, 0.8), 
+                 0 0 30px rgba(255, 215, 0, 0.7), 
+                 0 0 40px rgba(255, 200, 0, 0.6), 
+                 0 0 50px rgba(255, 180, 0, 0.5);
+}
+
+.tagline {
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(20, 18, 9);
+    text-transform: capitalize;
+    margin-top: -5px;
+    display: block;
+    text-shadow: 0 0 8px rgba(255, 223, 0, 0.9), 
+                 0 0 12px rgba(255, 200, 0, 0.7);
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+    position: relative;
+    z-index: 1100;
+}
+
+/* Mobile Menu */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .mobile-menu {
+        position: fixed;
+        top: 60px;
+        right: -60vw; /* Move out exactly by its width */
+        width: 60vw; /* Use viewport width for accuracy */
+        height: 80vh;
+        background: rgba(0, 0, 0, 0.9);
+        transition: right 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        border-radius: 10px 0 0 10px;
+    }
+    
+    /* When menu is active, bring it into view */
+    .mobile-menu.active {
+        right: 0;
+    }
+    
+    
+    .mobile-menu.active {
+        right: 0;
+    }
+    
+    .mobile-menu ul {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+    }
+    
+    .mobile-menu ul li {
+        padding: 15px;
+    }
+    
+    .mobile-menu ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+    }
+}
+@media (max-width: 768px) { /* Show only on small screens */
+    .hamburger {
+        display: block;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 60px; /* Adjust this value to lower the menu */
+    right: -100%;
+    width: 60%;
+    height: 80vh; /* Reduce height to 80% of viewport */
+    background: rgba(0, 0, 0, 0.9);
+    transition: right 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    border-radius: 10px 0 0 10px; /* Add rounded corners for a smooth effect */
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+.mobile-menu ul li {
+    padding: 15px;
+}
+.mobile-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+}
+.navbar.scrolled {
+    background: #361600;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 5%;
+}
+/* Heading Card */
+.heading-card {
+    background-color: #ffa264;
+    color: white;
+    padding: 1.5rem;
+    margin: 6rem auto 2rem; /* Increased top margin */
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+.heading-card span {
+    color: #2C1A10;
+}
+
+/* Social Media Cards */
+.social-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin: 2rem auto;
+    max-width: 800px;
+}
+
+.social-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    text-align: center;
+    width: 150px;
+}
+
+.social-card img {
+    width: 50px;
+    margin-bottom: 0.5rem;
+}
+
+.social-card a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    display: block;
+}
+
+.social-card:hover {
+    transform: scale(1.1);
+}
+
+/* Instagram & Facebook Feed */
+.instagram-feed, .facebook-feed {
+    margin: 3rem auto;
+    width: 90%;
+    max-width: 900px;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.instagram-feed h2, .facebook-feed h2 {
+    color: #8B0000;
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: #2C1A10;
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.footer-container {
+    max-width: 1120px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+}
+/* Custom Font */
+@font-face {
+    font-family: 'Samarkan';
+    src: url('../assets/fonts/SAMAN___.TTF') format('truetype');
+    font-display: swap;
+}
+
+/* Heading Styling */
+.footer-section h2 {
+    font-family: 'Samarkan', sans-serif;
+    font-size: 28px;
+    font-weight: normal;
+    color: #ff6600;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #ccc;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #facc15;
+}
+
+/* Social Icons */
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.footer-socials a {
+    font-size: 1.5rem;
+    color: #ccc;
+    transition: color 0.3s;
+}
+
+.footer-socials a:hover {
+    color: #facc15;
+}
+
+/* Copyright */
+.footer-copyright {
+    text-align: center;
+    color: #bbb;
+    margin-top: 1.5rem;
+    font-size: 0.875rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .social-cards {
+        flex-direction: column;
+    }
+
+    .social-card {
+        width: 90%;
+        margin: auto;
+    }
+}

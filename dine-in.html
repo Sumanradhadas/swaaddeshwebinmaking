@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Viewer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #111;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .image-container {
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .image-container img.loaded {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="assets/dine in/dine-menu_page-0001.jpg" loading="lazy">
+        <img src="assets/dine in/dine-menu_page-0002.jpg" loading="lazy">
+        <img src="assets/dine in/dine-menu_page-0003.jpg" loading="lazy">
+        <img src="assets/dine in/dine-menu_page-0004.jpg" loading="lazy">
+        <img src="assets/dine in/dine-menu_page-0005.jpg" loading="lazy">
+        <img src="assets/dine in/dine-menu_page-0006.jpg" loading="lazy">
+        <img src="assets/dine in/dine-menu_page-0007.jpg" loading="lazy">
+        <img src="assets/dine in/dine-menu_page-0008.jpg" loading="lazy">
+        <img src="assets/dine in/dine-menu_page-0009.jpg" loading="lazy">
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const images = document.querySelectorAll(".image-container img");
+            images.forEach(img => {
+                img.onload = () => img.classList.add("loaded");
+            });
+        });
+    </script>
+</body>
+</html>

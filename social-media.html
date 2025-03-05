@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swaddesh Social Media</title>
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+     <!-- Scripts -->
+     <script defer src="scripts/main.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html" class="logo-text">Swaaddesh</a>
+                <p class="tagline">Bihar themed restaurant</p>
+            </div>
+    
+            <!-- Normal Navigation (Desktop) -->
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="social-media.html">Social Media</a></li>
+            </ul>
+            <button class="hamburger" onclick="toggleMenu()">☰</button>
+        </nav>
+        
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+                <li><a href="about.html" onclick="toggleMenu()">About Us</a></li>
+                <li><a href="menu.html" onclick="toggleMenu()">Menu</a></li>
+                <li><a href="reviews.html" onclick="toggleMenu()">Reviews</a></li>
+                <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
+                <li><a href="social-media.html" onclick="toggleMenu()">Social Media</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Heading Card -->
+    <section class="heading-card">
+        <h2>Tag Us with <span>#Swaaddesh</span> to feature on our social media page.</h2>
+    </section>
+
+    <!-- Social Icon Image Cards -->
+    <section class="social-cards">
+        <div class="social-card">
+            <a href="https://www.instagram.com/swaaddesh/" target="_blank">
+                <img src="assets\insta log.jpg" alt="Instagram">
+                <p>Instagram</p>
+            </a>
+        </div>
+        <div class="social-card">
+            <a href="http://wa.me/+917759050327" target="_blank">
+                <img src="assets\whatsapp logo.png" alt="WhatsApp">
+                <p>WhatsApp</p>
+            </a>
+        </div>
+        <div class="social-card">
+            <a href="https://www.facebook.com/Swaaddesh" target="_blank">
+                <img src="assets\facebook logo.png" alt="Facebook">
+                <p>Facebook</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Instagram Live Feed -->
+    <section class="instagram-feed">
+        <h2>Instagram Live Feed</h2>
+        <div class="instagram-posts">
+            <!-- First Instagram Post -->
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/C58QSeePO8y/?utm_source=ig_web_copy_link" data-instgrm-version="14"></blockquote>
+            
+            <!-- Second Instagram Post -->
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DFrlHBEpV7u/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" data-instgrm-version="14"></blockquote>
+            
+            <script async src="https://www.instagram.com/embed.js"></script>
+        </div>
+    </section>
+    
+    
+    
+
+   <!-- Facebook SDK -->
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" 
+    src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v14.0">
+</script>
+
+<!-- Facebook Feed -->
+<section class="facebook-feed">
+    <h2>Facebook Feed</h2>
+    <iframe 
+        src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FSwaaddesh%2Fposts%2Fpfbid0GP1EXUfCtTGMu2QzGbVenDh5XdvvNCbvdPXFwL8PgREaCBVnhBEFmBEDxj2qcGbCl&show_text=true&width=500" 
+        width="500" 
+        height="600" 
+        style="border: none; overflow: hidden; max-width: 100%; display: block; margin: auto;" 
+        scrolling="no" 
+        frameborder="0" 
+        allowfullscreen="true" 
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+    </iframe>
+</section>
+   
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h2>Swaaddesh</h2>
+                <p>Bihar themed restaurant</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Socials</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="footer-socials">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            &copy; 2025 Swaddesh. All Rights Reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
